@@ -11,6 +11,7 @@ export  class LoginForm extends Component {
     }
 
     handleChange = ({target: {name, value}}) => {
+        console.log(name, value)
         this.setState({[name]: value});
     }
 
@@ -31,7 +32,7 @@ export  class LoginForm extends Component {
                         label = 'Login:'
                         type = 'email'
                         inputName = 'login'
-                        placeHolder = 'Enter your login'
+                        placeholder = 'Enter your login'
                         value = {this.state.login}
                         required
                         changeHandler={this.handleChange}
@@ -40,12 +41,12 @@ export  class LoginForm extends Component {
                         label = 'Password:'
                         type = 'password'
                         inputName = 'password'
-                        placeHolder = 'Enter your password'
-                        value = {this.state.login}
+                        placeholder = 'Enter your password'
+                        value = {this.state.password}
                         required
                         changeHandler={this.handleChange}
                     />
-                    <button>Log in</button>
+                    <button type='submit'>Log in</button>
                     <button onClick={googleLogin}>Login with Google</button>
                 </form>
                 <div>

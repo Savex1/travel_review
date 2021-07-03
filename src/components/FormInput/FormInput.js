@@ -10,6 +10,7 @@ export const FormInput = ({label, inputName, changeHandler, ...inputProps}) =>  
             id = {`from${inputName}`}
             onChange={changeHandler}
             name={inputName}
+            {...inputProps}
             />
         </div>
     )
